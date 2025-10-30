@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ma Page Web avec Tailwind</title>
+    <!-- CDN Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-orange-500 min-h-screen p-6">
+    <main role="main" class="flex justify-center">
+        <!-- Container -->
+        <div
+            class="w-full max-w-3xl bg-white bg-opacity-10 backdrop-filter backdrop-blur rounded-xl shadow-lg p-4 sm:p-6">
+
+            <!-- Header -->
+            <header class="flex items-center mb-4">
+                <img class="w-20 h-20 rounded-full object-cover mr-4" src="./img/avatar.png" alt="Photo de profil" />
+                <h1 class="font-extrabold text-white text-2xl">Chat</h1>
+            </header>
+
+            <!-- Messages -->
+            <section class="space-y-3" aria-label="Historique des messages">
+                <!-- Left -->
+                <div class="flex justify-start">
+                    <div class="bg-green-500 text-white px-4 py-3 rounded-2xl rounded-tl-md max-w-xl">
+                        <p>Hey, can you code in Tailwind CSS ?</p>
+                    </div>
+                </div>
+                <!-- Right -->
+                <div class="flex justify-end">
+                    <div class="bg-blue-500 text-white px-4 py-3 rounded-2xl rounded-tr-md max-w-xl">
+                        <p>Yes, however I'd rather use pure CSS. How 'bout you ?</p>
+                    </div>
+                </div>
+                <!-- Left -->
+                <div class="flex justify-start">
+                    <div class="bg-green-500 text-white px-4 py-3 rounded-2xl rounded-tl-md max-w-xl">
+                        <p>No but I wanna learn so bad ! Do you think you can help me ?</p>
+                    </div>
+                </div>
+                <!-- Right -->
+                <div class="flex justify-end">
+                    <div class="bg-blue-500 text-white px-4 py-3 rounded-2xl rounded-tr-md max-w-xl">
+                        <p>Of course !</p>
+                    </div>
+                </div>
+                <!-- Left -->
+                <div class="flex justify-start">
+                    <div class="bg-green-500 text-white px-4 py-3 rounded-2xl rounded-tl-md max-w-xl">
+                        <p>Danke schön ! :)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Zone Nouveau Message -->
+            <form class="flex gap-2 mt-6">
+                <textarea id="message" rows="2" placeholder="Entrez votre texte..."
+                    class="flex-1 bg-white text-black placeholder-white border border-white-10 rounded-lg p-3"></textarea>
+
+                <button type="submit" class="h-10 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg">
+                    Envoyer
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
