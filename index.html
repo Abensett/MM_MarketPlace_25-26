@@ -1,71 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ma Page Web avec Tailwind</title>
-    <!-- CDN Tailwind CSS -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marketplace · Galerie</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 
-<body class="bg-orange-500 min-h-screen p-6">
-    <main role="main" class="flex justify-center">
-        <!-- Container -->
-        <div
-            class="w-full max-w-3xl bg-white bg-opacity-10 backdrop-filter backdrop-blur rounded-xl shadow-lg p-4 sm:p-6">
-
-            <!-- Header -->
-            <header class="flex items-center mb-4">
-                <img class="w-20 h-20 rounded-full object-cover mr-4" src="./img/avatar.png" alt="Photo de profil" />
-                <h1 class="font-extrabold text-white text-2xl">Chat</h1>
-            </header>
-
-            <!-- Messages -->
-            <section class="space-y-3" aria-label="Historique des messages">
-                <!-- Left -->
-                <div class="flex justify-start">
-                    <div class="bg-green-500 text-white px-4 py-3 rounded-2xl rounded-tl-md max-w-xl">
-                        <p>Hey, can you code in Tailwind CSS ?</p>
-                    </div>
-                </div>
-                <!-- Right -->
-                <div class="flex justify-end">
-                    <div class="bg-blue-500 text-white px-4 py-3 rounded-2xl rounded-tr-md max-w-xl">
-                        <p>Yes, however I'd rather use pure CSS. How 'bout you ?</p>
-                    </div>
-                </div>
-                <!-- Left -->
-                <div class="flex justify-start">
-                    <div class="bg-green-500 text-white px-4 py-3 rounded-2xl rounded-tl-md max-w-xl">
-                        <p>No but I wanna learn so bad ! Do you think you can help me ?</p>
-                    </div>
-                </div>
-                <!-- Right -->
-                <div class="flex justify-end">
-                    <div class="bg-blue-500 text-white px-4 py-3 rounded-2xl rounded-tr-md max-w-xl">
-                        <p>Of course !</p>
-                    </div>
-                </div>
-                <!-- Left -->
-                <div class="flex justify-start">
-                    <div class="bg-green-500 text-white px-4 py-3 rounded-2xl rounded-tl-md max-w-xl">
-                        <p>Danke schön ! :)</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Zone Nouveau Message -->
-            <form class="flex gap-2 mt-6">
-                <textarea id="message" rows="2" placeholder="Entrez votre texte..."
-                    class="flex-1 bg-white text-black placeholder-white border border-white-10 rounded-lg p-3"></textarea>
-
-                <button type="submit" class="h-10 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg">
-                    Envoyer
+<body class="bg-yellow-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-yellow-200 border-b border-yellow-300">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div>
+                <p class="text-sm text-gray-700">Super</p>
+                <h1 class="text-2xl font-semibold">Marketplace</h1>
+            </div>
+            <div class="flex items-center">
+                <img src="./img/avatar.jpg" alt="Photo de profil"
+                    class="w-10 h-10 rounded-full bg-white object-cover mr-3" />
+                <button
+                    class="bg-yellow-400 hover:bg-yellow-500 text-white text-sm font-semibold px-4 py-2 rounded transition-colors">
+                    Se déconnecter
                 </button>
-            </form>
+            </div>
         </div>
+    </header>
+
+    <!-- Menu -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <ul class="flex flex-wrap">
+                <li><a href="#"
+                        class="block px-5 py-3 text-sm text-gray-700 hover:text-yellow-700 hover:bg-yellow-50 transition-colors">Accueil</a>
+                </li>
+                <li><a href="#"
+                        class="block px-5 py-3 text-sm text-gray-700 hover:text-yellow-700 hover:bg-yellow-50 transition-colors">Nouveautés</a>
+                </li>
+                <li><a href="#"
+                        class="block px-5 py-3 text-sm text-gray-700 hover:text-yellow-700 hover:bg-yellow-50 transition-colors">Populaires</a>
+                </li>
+                <li><a href="#"
+                        class="block px-5 py-3 text-sm text-gray-700 hover:text-yellow-700 hover:bg-yellow-50 transition-colors">Électronique</a>
+                </li>
+                <li><a href="#"
+                        class="block px-5 py-3 text-sm text-gray-700 hover:text-yellow-700 hover:bg-yellow-50 transition-colors">Maison</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <h2 class="text-xl font-semibold mb-6">Galerie d’articles</h2>
+
+        <!-- Grille simple -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 1. Ordinateur portable -->
+            <a href="#" class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <img src="/img/ordi.jpg"
+                    alt="Ordinateur portable" class="w-full h-40 object-cover bg-gray-100 rounded-t-lg" />
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900">Ordinateur portable</h3>
+                    <p class="text-sm text-gray-600 mt-2">Puissant et compact pour le travail nomade.</p>
+                    <p class="mt-3 font-semibold text-gray-900">999,00 €</p>
+                </div>
+            </a>
+
+            <!-- 2. Casque audio -->
+            <a href="#" class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <img src="/img/casque.jpg"
+                    alt="Casque audio" class="w-full h-40 object-cover bg-gray-100 rounded-t-lg" />
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900">Casque audio</h3>
+                    <p class="text-sm text-gray-600 mt-2">Son clair et confort longue durée.</p>
+                    <p class="mt-3 font-semibold text-gray-900">149,00 €</p>
+                </div>
+            </a>
+
+            <!-- 3. Appareil photo -->
+            <a href="#" class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <img src="/img/appareil.webp"
+                    alt="Appareil photo" class="w-full h-40 object-cover bg-gray-100 rounded-t-lg" />
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900">Appareil photo</h3>
+                    <p class="text-sm text-gray-600 mt-2">Capturez vos plus beaux souvenirs.</p>
+                    <p class="mt-3 font-semibold text-gray-900">599,00 €</p>
+                </div>
+            </a>
+
+            <!-- 4. Montre connectée -->
+            <a href="#" class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <img src="/img/montre.webp"
+                    alt="Montre connectée" class="w-full h-40 object-cover bg-gray-100 rounded-t-lg" />
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900">Montre connectée</h3>
+                    <p class="text-sm text-gray-600 mt-2">Suivi d’activité et notifications.</p>
+                    <p class="mt-3 font-semibold text-gray-900">129,00 €</p>
+                </div>
+            </a>
+
+            <!-- 5. Clavier mécanique -->
+            <a href="#" class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <img src="/img/clavier.webp"
+                    alt="Clavier mécanique" class="w-full h-40 object-cover bg-gray-100 rounded-t-lg" />
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900">Clavier mécanique</h3>
+                    <p class="text-sm text-gray-600 mt-2">Frappe précise et durable.</p>
+                    <p class="mt-3 font-semibold text-gray-900">89,00 €</p>
+                </div>
+            </a>
+
+            <!-- 6. Lampe de bureau -->
+            <a href="#" class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <img src="/img/lampe.webp"
+                    alt="Lampe de bureau" class="w-full h-40 object-cover bg-gray-100 rounded-t-lg" />
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900">Lampe de bureau</h3>
+                    <p class="text-sm text-gray-600 mt-2">Éclairage doux et directionnel.</p>
+                    <p class="mt-3 font-semibold text-gray-900">39,00 €</p>
+                </div>
+            </a>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-xs text-gray-600 absolute bottom-0 w-full">
+
+        <p class = "text-center">Marketplace avec HTML + Tailwind CSS</p>
+    </footer>
 </body>
 
-</html>
+</html> 
